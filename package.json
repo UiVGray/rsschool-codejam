@@ -1,0 +1,19 @@
+{
+  "name": "codejam",
+  "version": "1.0.0",
+  "description": "CodeJam-3 CoreJS",
+  "main": "sumOfOther.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/UiVGray/rsschool-codejam.git"
+  },
+  "author": "Sergey Gaydurov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UiVGray/rsschool-codejam/issues"
+  },
+  "homepage": "https://github.com/UiVGray/rsschool-codejam#readme"
+}
