@@ -6,6 +6,12 @@
   "scripts": {
     "test": "mocha"
   },
+  "dependencies": {
+    "mocha": "latest",
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "latest"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/UiVGray/rsschool-codejam.git"

@@ -1,13 +1,11 @@
 function sumOfOther(inArray) {
-    let outArray = [];
+    const outArray = [];
 
-    for (let i = 0; i < inArray.length; i++) {
+    for (let i = 0; i < inArray.length; i += 1) {
         let sum = 0;
 
-        for (let j = 0; j < inArray.length; j++) {
-            if (j === i) continue;
-
-            sum += inArray[j];
+        for (let j = 0; j < inArray.length; j += 1) {
+            if (j !== i) sum += inArray[j];
         }
 
         outArray.push(sum);

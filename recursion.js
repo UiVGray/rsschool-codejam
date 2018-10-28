@@ -1,20 +1,19 @@
 function recursion(inTree) {
-    let outArray = [];
+    const outArray = [];
 
-    function unwrapTree(inTreePart, level)
-    {
+    function unwrapTree(inTreePart, level) {
         if (!outArray[level]) {
             outArray[level] = [];
         }
 
-        outArray[level].push(inTreePart['value']);
+        outArray[level].push(inTreePart.value);
 
-        if (inTreePart['left']) {
-            unwrapTree(inTreePart['left'], level + 1);
+        if (inTreePart.left) {
+            unwrapTree(inTreePart.left, level + 1);
         }
 
-        if (inTreePart['right']) {
-            unwrapTree(inTreePart['right'], level + 1);
+        if (inTreePart.right) {
+            unwrapTree(inTreePart.right, level + 1);
         }
     }
 

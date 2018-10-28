@@ -1,17 +1,17 @@
-const assert = require('assert');
+const assert = require("assert");
 
-function make() {
-    let argList = [];
-    function tempFunction() {
-        if (typeof arguments[0] === 'function') {
-            assert(arguments.length === 1);
-            return argList.reduce(arguments[0]);
+function make(...args) {
+    const argList = [];
+    function tempFunction(...varargs) {
+        if (typeof varargs[0] === "function") {
+            assert(varargs.length === 1);
+            return argList.reduce(varargs[0]);
         }
-        argList.push(...arguments);
+        argList.push(...varargs);
         return tempFunction;
     }
 
-    return tempFunction(...arguments);
+    return tempFunction(...args);
 }
 
 module.exports = make;
