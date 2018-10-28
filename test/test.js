@@ -1,6 +1,7 @@
 const assert = require('assert')
 const sumOfOther = require('../sumOfOther')
 const make = require('../make')
+const recursion = require('../recursion')
 
 describe('Tests for codejam', () => {
     describe('sumOfOther test cases', () => {
@@ -36,5 +37,21 @@ describe('Tests for codejam', () => {
             assert.deepStrictEqual(make(1)(2, 3)(4, 5 ,6)(mult), 720);
         });
 
-    })
+    });
+    describe('recursion test cases', () => {
+        let tree1 = {"value":100,"left":{"value":90,"left":{"value":70},"right":{"value":99}},"right":{"value":120,"left":{"value":110},"right":{"value":130}}};
+        it('test 1', () => {
+            assert.deepStrictEqual(recursion(tree1), [[100], [90, 120], [70,99,110,130]]);
+        });
+
+        let tree2 = {"value":1,"left":{"value":2},"right":{"value":3}};
+        it('test 2', () => {
+            assert.deepStrictEqual(recursion(tree2), [[1], [2, 3]]);
+        });
+
+        let tree3 = {"value":80,"left":{"value":32,"left":{"value":10},"right":{"value":58}},"right":{"value":93,"right":{"value":100},"left":{"value":86}}};
+        it('test 3', () => {
+            assert.deepStrictEqual(recursion(tree3), [[80], [32, 93], [10, 58, 86, 100]]);
+        });
+    });
 })  
